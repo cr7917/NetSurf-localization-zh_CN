@@ -1,0 +1,75 @@
+From cb9a6e39cc7434da00a52ba51bef950227963b40 Mon Sep 17 00:00:00 2001
+From: Zixing Liu <liushuyu@aosc.io>
+Date: Mon, 10 Aug 2020 21:15:25 -0600
+Subject: [PATCH 2/2] Makefile: add Chinese (Simplified) translation target
+
+Signed-off-by: Zixing Liu <liushuyu@aosc.io>
+---
+ Makefile                                 | 2 +-
+ frontends/gtk/Makefile                   | 2 +-
+ frontends/gtk/res/messages.gresource.xml | 1 +
+ frontends/gtk/res/netsurf.gresource.xml  | 3 +++
+ 4 files changed, 6 insertions(+), 2 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index 6183745..9fb2c84 100644
+--- a/Makefile
++++ b/Makefile
+@@ -128,7 +128,7 @@ MESSAGES:=
+ # The filter applied to the fat (full) messages to generate split messages
+ MESSAGES_FILTER=any
+ # The languages in the fat messages to convert
+-MESSAGES_LANGUAGES=de en fr it nl
++MESSAGES_LANGUAGES=de en fr it nl zh_CN
+ # The target directory for the split messages
+ MESSAGES_TARGET=resources
+ 
+diff --git a/frontends/gtk/Makefile b/frontends/gtk/Makefile
+index 02a5fdb..e4929e4 100644
+--- a/frontends/gtk/Makefile
++++ b/frontends/gtk/Makefile
+@@ -185,7 +185,7 @@ GTK_RESOURCES_LIST := \
+ 	$(wildcard $(NSGTK_RESOURCES_DIR)/*.gtk$(NETSURF_GTK_MAJOR).ui)
+ 
+ # translations with more than just Messages files
+-GTK_TRANSLATIONS_HTML := de en fr it ja nl
++GTK_TRANSLATIONS_HTML := de en fr it ja nl zh_CN
+ 
+ # destination for installed resources is the first entry in the gtk resource path
+ NSGTK_RESOURCES_DESTDIR := $(DESTDIR)$(word 1,$(subst :, ,$(NETSURF_GTK_RES_PATH)))
+diff --git a/frontends/gtk/res/messages.gresource.xml b/frontends/gtk/res/messages.gresource.xml
+index 684a108..6da4062 100644
+--- a/frontends/gtk/res/messages.gresource.xml
++++ b/frontends/gtk/res/messages.gresource.xml
+@@ -6,5 +6,6 @@
+     <file>de/Messages</file>
+     <file>fr/Messages</file>
+     <file>it/Messages</file>
++    <file>zh_CN/Messages</file>
+   </gresource>
+ </gresources>
+diff --git a/frontends/gtk/res/netsurf.gresource.xml b/frontends/gtk/res/netsurf.gresource.xml
+index 17d2c08..21fbe86 100644
+--- a/frontends/gtk/res/netsurf.gresource.xml
++++ b/frontends/gtk/res/netsurf.gresource.xml
+@@ -41,14 +41,17 @@
+     <file>credits.html</file>
+     <file>it/credits.html</file>
+     <file>nl/credits.html</file>
++    <file>zh_CN/credits.html</file>
+     <file>licence.html</file>
+     <file>it/licence.html</file>
+     <file>nl/licence.html</file>
++    <file>zh_CN/licence.html</file>
+     <file>welcome.html</file>
+     <file>de/welcome.html</file>
+     <file>it/welcome.html</file>
+     <file>ja/welcome.html</file>
+     <file>nl/welcome.html</file>
++    <file>zh_CN/welcome.html</file>
+     <file>adblock.css</file>
+     <file>default.css</file>
+     <file>internal.css</file>
+-- 
+2.28.0
+

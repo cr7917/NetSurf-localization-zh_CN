@@ -1,0 +1,49 @@
+From cb9a6e39cc7434da00a52ba51bef950227963b40 Mon Sep 17 00:00:00 2001
+From: Zixing Liu <liushuyu@aosc.io>
+Date: Mon, 10 Aug 2020 21:20:16 -0600
+Subject: [PATCH 0/2] introduce Chinese (Simplified) localisation
+
+This set of patches introduces full Chinese (Simplified, China; zh_CN)
+localisation for the NetSurf browser.
+
+The first patch contains the actual translation content, while the
+second one contains necessary build script modifications to make this
+localisation work with NetSurf (details enclosed)
+
+UI and resource localisation was done by Weiyi Xu and were proofread by
+Mingcong Bai and Zixing Liu from the Anthon Open Source Community
+(https://aosc.io/).
+
+Specifically, Mingcong Bai and Zixing Liu are mentors to Weiyi Xu, as
+part of our community's involvement in the Open Source Promotion Plan
+2020, hosted by the ISCAS (Institute of Software of the Chinese Academy
+of Sciences) and the openEuler Community.
+
+Weiyi Xu (1):
+  resources: add Chinese (Simplified) translations
+
+Zixing Liu (1):
+  Makefile: add Chinese (Simplified) translation target
+
+ Makefile                                 |    2 +-
+ frontends/gtk/Makefile                   |    2 +-
+ frontends/gtk/res/messages.gresource.xml |    1 +
+ frontends/gtk/res/netsurf.gresource.xml  |    3 +
+ frontends/gtk/res/zh_CN/credits.html     |    1 +
+ frontends/gtk/res/zh_CN/licence.html     |    1 +
+ frontends/gtk/res/zh_CN/welcome.html     |    1 +
+ resources/FatMessages                    | 2309 ++++++++++++++++++++++
+ resources/zh_CN/credits.html             |   98 +
+ resources/zh_CN/licence.html             | 1869 +++++++++++++++++
+ resources/zh_CN/welcome.html             |   65 +
+ 11 files changed, 4350 insertions(+), 2 deletions(-)
+ create mode 120000 frontends/gtk/res/zh_CN/credits.html
+ create mode 120000 frontends/gtk/res/zh_CN/licence.html
+ create mode 120000 frontends/gtk/res/zh_CN/welcome.html
+ create mode 100644 resources/zh_CN/credits.html
+ create mode 100644 resources/zh_CN/licence.html
+ create mode 100644 resources/zh_CN/welcome.html
+
+-- 
+2.28.0
+
